@@ -17,6 +17,9 @@
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true
   },
+  "files": [
+    "src/modules.d.ts"
+  ],
   "exclude": [
       "node_modules"
   ],
