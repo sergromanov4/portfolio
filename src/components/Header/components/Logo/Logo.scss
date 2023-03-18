@@ -1,6 +1,16 @@
-
+@import "src/styles/variables";
 
 .logo {
     display: flex;
     flex-direction: row;
+    font-size: 2em;
+    font-weight: 700;
+
+    span:first-child {
+        color: $grey;
+    }
+
+    span:last-child {
+        color: $white;
+    }
 }

@@ -1,12 +1,22 @@
 import React from 'react';
 
+import Wrapper from 'components/Wrapper';
+
 import Logo from './components/Logo';
+import Menu from './components/Menu';
+import Contacts from './components/Contacts';
+
+import styles from './Header.scss';
 
 const Header: React.FC = () => {
     return (
-        <div className="App">
-            <Logo />
-        </div>
+        <Wrapper>
+            <div className={styles.header}>
+                <Logo />
+                <Menu />
+                <Contacts />
+            </div>
+        </Wrapper>
     );
 };
 

@@ -98,22 +98,15 @@ module.exports = () => {
             },
             {
                 test: /\.svg$/,
-                oneOf: [
-                    {
-                        issuer: /\.[jt]sx?$/,
-                        exclude: /node_modules/,
-                        use: ['@svgr/webpack'],
+                use: [
+                  {
+                    loader: 'svg-url-loader',
+                    options: {
+                      limit: 10000,
                     },
-                    {
-                        issuer:  /\.s?css$/,
-                        exclude: /node_modules/,
-                        type: 'asset/resource',
-                        generator: {
-                            filename: 'images/[name][ext]'
-                        }
-                    }
-                ]
-            },
+                  },
+                ],
+              },
             {
                 test: /\.(png|jpg|gif|pdf|eps)$/,
                 oneOf: [

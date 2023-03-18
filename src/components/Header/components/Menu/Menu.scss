@@ -1,0 +1,18 @@
+@import "src/styles/variables";
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+
+    &__item {
+        list-style-type: none;
+        font-size: 1.3em;
+        cursor: pointer;
+        
+        &:hover {
+            color: $green;
+            transition: 0.5s ease-in color;
+        }
+    }
+}
