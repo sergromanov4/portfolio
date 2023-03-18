@@ -5,9 +5,10 @@
     flex-direction: row;
     font-size: 2em;
     font-weight: 700;
+    text-transform: uppercase;
 
     span:first-child {
-        color: $grey;
+        color: $greyMain;
     }
 
     span:last-child {

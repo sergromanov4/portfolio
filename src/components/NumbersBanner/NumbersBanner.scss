@@ -1,0 +1,27 @@
+@import "src/styles/variables";
+
+.numbersBanner {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 10px;
+
+        span:first-child {
+            font-size: 3.6em;
+            color: $greyMain;
+            font-weight: 700;
+        }
+        span:last-child {
+            font-size: 1.4em;
+            color: $grey2;
+            white-space: pre-wrap;
+        }
+    }
+}

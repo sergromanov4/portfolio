@@ -1,0 +1,72 @@
+@import "src/styles/variables";
+
+.bannerImage {
+    position: relative;
+    height: 350px;
+    width: 350px;
+    background-color: $grey3;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 50px 1px $black;
+    z-index: 1;
+
+    &__avatar {
+        height: 280px;
+        width: 280px;
+        margin-bottom: 35px;
+    }
+
+    &__reactIcon,
+    &__reduxIcon,
+    &__tsIcon {
+        position: absolute;
+        background-color: $grey3;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: -2px 3px 27px 0px #000;
+        z-index: 2;
+    }
+
+
+    &__reactIcon {
+        height: 120px;
+        width: 120px;
+        bottom: 20px;
+        left: -10px;
+
+        img {
+            height: 90px;
+            width: 90px;
+        }
+    }
+
+    &__reduxIcon {
+        height: 100px;
+        width: 100px;
+        bottom: 10px;
+        right: 0px;
+
+        img {
+            height: 70px;
+            width: 70px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__tsIcon {
+        height: 80px;
+        width: 80px;
+        top: -10px;
+        right: 30px;
+
+        img {
+            height: 40px;
+            width: 40px;
+            border-radius: 5px;
+        }
+    }
+}
