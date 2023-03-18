@@ -21,4 +21,28 @@
         justify-content: center;
         align-items: center;
     }
+
+    &__inline {
+        padding: 0;
+        background: none;
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        font-size: 1.3em;
+        cursor: pointer;
+        min-width: unset;
+        border: none;
+
+        .button__wrapper {
+            background: none;
+            padding: 0;
+            border-radius: 0;
+            min-width: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }

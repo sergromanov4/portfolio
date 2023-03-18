@@ -9,7 +9,13 @@ interface IContactsItem {
     icon: string;
 }
 
+interface ISkillsItem {
+    name: string;
+    icon: string;
+}
+
 export {
     IMenuItem,
-    IContactsItem
+    IContactsItem,
+    ISkillsItem
 };

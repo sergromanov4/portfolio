@@ -3,7 +3,7 @@ import React from 'react';
 import avatarIcon from 'icons/banner/avatar.svg';
 import reactIcon from 'icons/banner/react.svg';
 import reduxIcon from 'icons/banner/redux.svg';
-import typescriptIcon from 'icons/banner/typescript.svg';
+import typescriptIcon from 'icons/typescript.svg';
 
 import styles from './BannerImage.scss';
 
