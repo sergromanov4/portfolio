@@ -1,14 +1,8 @@
-import EAboutMeTypes from './enum/EAboutMeTypes';
+import { EAboutMeTypes } from './enum/ECommonTypes';
 
 const mapAboutMeTypesToValue = {
-    [EAboutMeTypes.career]: {
-        title: 'career',
-        text: 'text about career'
-    },
-    [EAboutMeTypes.life]: {
-        title: 'life',
-        text: 'text about life'
-    }
+    [EAboutMeTypes.career]: 'text about career',
+    [EAboutMeTypes.life]: 'text about life'
 };
 
 export default mapAboutMeTypesToValue;

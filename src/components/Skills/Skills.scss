@@ -1,26 +1,15 @@
 @import "src/styles/variables";
 
 .skills {
-    padding: 100px 0;
-    background-color: $black;
-
-    &__header {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        font-size: 3em;
-    }
-
-    &__title {
-        color: $green;
-    }
+    padding: 130px 0;
+    background-color: $black2;
 
     &__list {
         margin-top: 50px;
         display: flex;
-        flex-direction: row;
-        gap: 40px 60px;
+        row-gap: 40px;
         flex-wrap: wrap;
+        justify-content: space-between;
 
         &__item {
             display: flex;
@@ -31,6 +20,7 @@
 
             span {
                 color: $greyMain;
+                text-align: center;
             }
 
             &:hover {

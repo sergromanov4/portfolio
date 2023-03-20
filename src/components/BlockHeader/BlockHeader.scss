@@ -1,0 +1,55 @@
+@import "src/styles/variables";
+
+.blockHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 3em;
+
+    &__lines {
+        margin-left: 15px;
+        color: $grey1;
+        line-height: 1;
+    }
+
+    &__title {
+        color: $green;
+    }
+    
+    &__menuItem {
+        opacity: 0.5;
+        font-size: 0.8em;
+
+
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &_active {
+            color: $green;
+            opacity: 1;
+        }
+    }
+
+    &__menu {
+        padding-right: 10px;
+        display: flex;
+        flex-direction: row;
+        column-gap: 15px;
+
+        &__type {
+            font-size: 0.6em;
+            display: flex;
+            align-items: center;
+            color: $grey1;
+            margin-bottom: -8px;
+        }
+    }
+}

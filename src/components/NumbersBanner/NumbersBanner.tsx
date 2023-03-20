@@ -11,7 +11,10 @@ const BannerText: React.FC = () => {
         <Wrapper>
             <div className={styles.numbersBanner}>
                 {NUMBERS_LIST.map((item) => (
-                    <div className={styles.numbersBanner__item}>
+                    <div
+                        key={item.description}
+                        className={styles.numbersBanner__item}
+                    >
                         <span>
                             {item.number}
                         </span>
