@@ -2,10 +2,26 @@
 
 .aboutMe {
     padding: 130px 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &__text {
         margin-top: 30px;
         font-size: 1.5em;
         max-width: 50%;
+        min-height: 50%;
+        opacity: 0;
+        transform: translatex(-100%);
+        filter: blur(15px);
+    }
+
+
+    &_animation {
+        transform: translateX(0);
+        filter: blur(0);
+        opacity: 1;
+        transition: 1s ease all;
     }
 }

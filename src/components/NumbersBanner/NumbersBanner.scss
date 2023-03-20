@@ -14,6 +14,10 @@
         align-items: center;
         column-gap: 10px;
 
+        transform: translateY(100%);
+        filter: blur(15px);
+        opacity: 0;
+
         span:first-child {
             font-size: 3.6em;
             color: $greyMain;
@@ -23,6 +27,15 @@
             font-size: 1.4em;
             color: $grey2;
             white-space: pre-wrap;
+        }
+    }
+
+    &_animation {
+        .numbersBanner__item {
+            transform: translateY(0);
+            filter: blur(0);
+            opacity: 1;
+            transition: 1s ease all 1.6s;
         }
     }
 }

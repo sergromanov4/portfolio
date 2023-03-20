@@ -1,4 +1,6 @@
 import React, { useCallback, useState, useMemo } from 'react';
+import { useInView } from 'react-intersection-observer';
+import classNames from 'classnames';
 
 import Wrapper from 'components/Wrapper';
 import BlockHeader from 'components/BlockHeader';
@@ -19,6 +21,11 @@ const AboutMe: React.FC = () => {
         Object.values(EAboutMeTypes) || []
     ), []);
 
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true
+    });
+
     return (
         <Wrapper>
             <div className={styles.aboutMe}>
@@ -29,7 +36,12 @@ const AboutMe: React.FC = () => {
                     onChangeClick={handleClick}
                 />
 
-                <div className={styles.aboutMe__text}>
+                <div
+                    ref={ref}
+                    className={classNames(styles.aboutMe__text, {
+                        [styles.aboutMe_animation]: inView
+                    })}
+                >
                     {mapAboutMeTypesToValue[currentType]}
                 </div>
             </div>

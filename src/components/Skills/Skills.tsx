@@ -1,4 +1,6 @@
 import React, { useCallback, useMemo, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import classNames from 'classnames';
 
 import Wrapper from 'components/Wrapper';
 import BlockHeader from 'components/BlockHeader';
@@ -20,6 +22,11 @@ const Skills: React.FC = () => {
         Object.values(ESkillsTypes) || []
     ), []);
 
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true
+    });
+
     return (
         <div className={styles.skills}>
             <Wrapper>
@@ -30,7 +37,12 @@ const Skills: React.FC = () => {
                     onChangeClick={handleClick}
                 />
 
-                <div className={styles.skills__list}>
+                <div
+                    ref={ref}
+                    className={classNames(styles.skills__list, {
+                        [styles.skills__list_animation]: inView
+                    })}
+                >
                     {mapSkillsTypesToValue[currentType].map((item) => (
                         <div
                             key={item.name}
