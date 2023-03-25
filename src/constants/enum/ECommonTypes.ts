@@ -8,4 +8,9 @@ enum ESkillsTypes {
     exp = 'haveExperience'
 }
 
-export { ESkillsTypes, EAboutMeTypes };
+enum ECompany {
+    kodep = 'kodep',
+    league = 'league'
+}
+
+export { ESkillsTypes, EAboutMeTypes, ECompany };

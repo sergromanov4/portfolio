@@ -1,4 +1,4 @@
-import { ISkillsItem } from 'interfaces/routers';
+import { ISkillsItem } from 'interfaces/common';
 
 import reactIcon from 'icons/skills/react.svg';
 import reduxIcon from 'icons/skills/redux.svg';
@@ -109,7 +109,7 @@ const SKILLS_EXP: ISkillsItem[] = [
         icon: materialuiIcon
     },
     {
-        name: 'ZeplinIcon',
+        name: 'Zeplin',
         icon: zeplinIcon
     }
 ];

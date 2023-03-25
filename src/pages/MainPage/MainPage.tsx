@@ -5,6 +5,7 @@ import Banner from 'components/Banner';
 import NumbersBanner from 'components/NumbersBanner';
 import AboutMe from 'components/AboutMe';
 import Skills from 'components/Skills';
+import Companies from 'components/Companies';
 
 const App: React.FC = () => {
     return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
             <NumbersBanner />
             <AboutMe />
             <Skills />
+            <Companies />
         </div>
     );
 };

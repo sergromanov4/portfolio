@@ -4,14 +4,16 @@
     padding: 130px 0;
     background-color: $black2;
     overflow: hidden;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
 
     &__list {
         margin-top: 50px;
         display: flex;
-        row-gap: 40px;
         flex-wrap: wrap;
         justify-content: space-between;
+        row-gap: 40px;
+
         transform: translateY(100%);
         filter: blur(15px);
         opacity: 0;

@@ -1,4 +1,4 @@
-import { IMenuItem, IContactsItem } from 'interfaces/routers';
+import { IMenuItem, IContactsItem } from 'interfaces/common';
 
 import linkedinIcon from 'icons/contacts/linkedin.svg';
 import gitHubIcon from 'icons/contacts/github.svg';

@@ -1,0 +1,14 @@
+@import "src/styles/variables";
+
+.companies {
+    padding: 130px 0;
+    min-height: 100vh;
+    height: 100%;
+
+    &__list {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+}
