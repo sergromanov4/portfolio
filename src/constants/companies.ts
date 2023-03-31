@@ -12,7 +12,7 @@ const COMPANIES: ICompanyItem[] = [
         link: 'https://kodep.ru/en'
     },
     {
-        name: 'Digital League',
+        name: 'Digital Economy League',
         postFrom: 'Junior',
         postTo: 'Frontend lead',
         dateFrom: '08/2019',

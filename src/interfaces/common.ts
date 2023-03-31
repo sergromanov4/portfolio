@@ -26,9 +26,16 @@ interface ICompanyItem {
     imgType: ECompany,
 }
 
+interface IProjectsItem {
+    name: string;
+    description: string;
+    link?: string;
+}
+
 export {
     IMenuItem,
     IContactsItem,
     ISkillsItem,
-    ICompanyItem
+    ICompanyItem,
+    IProjectsItem
 };

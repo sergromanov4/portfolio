@@ -4,7 +4,8 @@ import Wrapper from 'components/Wrapper';
 
 import Logo from './components/Logo';
 import Menu from './components/Menu';
-import Contacts from './components/Contacts';
+
+import Contacts from '../Contacts';
 
 import styles from './Header.scss';
 

@@ -1,7 +1,9 @@
-import classNames from 'classnames';
-import Button from 'components/ui/Button';
-import { ECompany } from 'constants/enum/ECommonTypes';
 import React, { useCallback } from 'react';
+import classNames from 'classnames';
+
+import Button from 'components/ui/Button';
+
+import { ECompany } from 'constants/enum/ECommonTypes';
 
 import styles from './CompanyCard.scss';
 

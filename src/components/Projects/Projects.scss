@@ -1,0 +1,25 @@
+@import "src/styles/variables";
+
+.projects {
+    padding: 130px 0;
+    min-height: 100vh;
+    height: 100%;
+    background-color: $black2;
+
+    &__list {
+        position: relative;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        &__line {
+            position: absolute;
+            height: 100%;
+            left: 50%;
+            right: 50%;
+            width: 4px;
+            background-color: $green;
+        }
+    }
+}

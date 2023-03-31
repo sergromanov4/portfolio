@@ -6,6 +6,8 @@ import NumbersBanner from 'components/NumbersBanner';
 import AboutMe from 'components/AboutMe';
 import Skills from 'components/Skills';
 import Companies from 'components/Companies';
+import Projects from 'components/Projects';
+import Footer from 'components/Footer';
 
 const App: React.FC = () => {
     return (
@@ -16,6 +18,8 @@ const App: React.FC = () => {
             <AboutMe />
             <Skills />
             <Companies />
+            <Projects />
+            <Footer />
         </div>
     );
 };
