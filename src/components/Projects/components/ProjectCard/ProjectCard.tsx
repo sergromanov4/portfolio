@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import classNames from 'classnames';
 
+import Animation from 'components/ui/Animation';
 import Button from 'components/ui/Button';
 
 import styles from './ProjectCard.scss';
@@ -41,10 +42,17 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
                     </Button>
                 )}
 
-                <div className={classNames(styles.projectCard__wrapper__circle, {
-                    [styles.projectCard__wrapper__circle_even]: isEven
+                <div className={classNames(styles.projectCard__wrapper__circlePosition, {
+                    [styles.projectCard__wrapper__circlePosition_even]: isEven
                 })}
-                />
+                >
+                    <Animation
+                        type="fade"
+                        delay={1}
+                    >
+                        <div className={styles.projectCard__wrapper__circle} />
+                    </Animation>
+                </div>
             </div>
         </div>
     );

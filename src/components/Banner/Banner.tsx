@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Wrapper from 'components/Wrapper';
+import Animation from 'components/ui/Animation';
 
 import BannerText from './components/BannerText';
 import BannerImage from './components/BannerImage';
@@ -11,8 +12,16 @@ const Banner: React.FC = () => {
     return (
         <Wrapper>
             <div className={styles.banner}>
-                <BannerText />
-                <BannerImage />
+                <Animation type="slideLeft">
+                    <BannerText />
+                </Animation>
+
+                <Animation
+                    type="slideRight"
+                    delay={0.8}
+                >
+                    <BannerImage />
+                </Animation>
             </div>
         </Wrapper>
     );

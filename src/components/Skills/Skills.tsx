@@ -1,7 +1,6 @@
 import React, { useCallback, useMemo, useState } from 'react';
-import { useInView } from 'react-intersection-observer';
-import classNames from 'classnames';
 
+import Animation from 'components/ui/Animation';
 import Wrapper from 'components/Wrapper';
 import BlockHeader from 'components/BlockHeader';
 
@@ -22,41 +21,38 @@ const Skills: React.FC = () => {
         Object.values(ESkillsTypes) || []
     ), []);
 
-    const { ref, inView } = useInView({
-        threshold: 0,
-        triggerOnce: true
-    });
-
     return (
         <div className={styles.skills}>
             <Wrapper>
-                <BlockHeader
-                    title="getSkills"
-                    typesList={typesList}
-                    currentType={currentType}
-                    onChangeClick={handleClick}
-                />
+
+                <Animation type="fade">
+                    <BlockHeader
+                        title="getSkills"
+                        typesList={typesList}
+                        currentType={currentType}
+                        onChangeClick={handleClick}
+                    />
+                </Animation>
 
                 <div
-                    ref={ref}
-                    className={classNames(styles.skills__list, {
-                        [styles.skills__list_animation]: inView
-                    })}
+                    className={styles.skills__list}
                 >
-                    {mapSkillsTypesToValue[currentType].map((item) => (
-                        <div
+                    {mapSkillsTypesToValue[currentType].map((item, index) => (
+                        <Animation
                             key={item.name}
-                            className={styles.skills__list__item}
+                            mapIndex={index}
                         >
-                            <img
-                                className={styles.skills__list__item__img}
-                                src={item.icon}
-                                alt="icon"
-                            />
-                            <span>
-                                {item.name}
-                            </span>
-                        </div>
+                            <div className={styles.skills__list__item}>
+                                <img
+                                    className={styles.skills__list__item__img}
+                                    src={item.icon}
+                                    alt="icon"
+                                />
+                                <span>
+                                    {item.name}
+                                </span>
+                            </div>
+                        </Animation>
                     ))}
                 </div>
             </Wrapper>

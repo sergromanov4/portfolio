@@ -1,6 +1,4 @@
 import React from 'react';
-import { useInView } from 'react-intersection-observer';
-import classNames from 'classnames';
 
 import avatarIcon from 'icons/banner/avatar.svg';
 import reactIcon from 'icons/banner/react.svg';
@@ -10,18 +8,8 @@ import typescriptIcon from 'icons/typescript.svg';
 import styles from './BannerImage.scss';
 
 const BannerImage: React.FC = () => {
-    const { ref, inView } = useInView({
-        threshold: 0,
-        triggerOnce: true
-    });
-
     return (
-        <div
-            ref={ref}
-            className={classNames(styles.bannerImage, {
-                [styles.bannerImage_animation]: inView
-            })}
-        >
+        <div className={styles.bannerImage}>
             <img
                 className={styles.bannerImage__avatar}
                 src={avatarIcon}

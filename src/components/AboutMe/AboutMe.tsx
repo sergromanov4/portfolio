@@ -1,8 +1,7 @@
 import React, { useCallback, useState, useMemo } from 'react';
-import { useInView } from 'react-intersection-observer';
-import classNames from 'classnames';
 
 import Wrapper from 'components/Wrapper';
+import Animation from 'components/ui/Animation';
 import BlockHeader from 'components/BlockHeader';
 
 import { EAboutMeTypes } from 'constants/enum/ECommonTypes';
@@ -21,28 +20,24 @@ const AboutMe: React.FC = () => {
         Object.values(EAboutMeTypes) || []
     ), []);
 
-    const { ref, inView } = useInView({
-        threshold: 0,
-        triggerOnce: true
-    });
-
     return (
         <Wrapper>
             <div className={styles.aboutMe}>
-                <BlockHeader
-                    title="getAboutMe"
-                    currentType={currentType}
-                    typesList={typesList}
-                    onChangeClick={handleClick}
-                />
-
-                <div
-                    ref={ref}
-                    className={classNames(styles.aboutMe__text, {
-                        [styles.aboutMe_animation]: inView
-                    })}
+                <Animation
+                    type="fade"
+                    transitionDuration={1}
                 >
-                    {mapAboutMeTypesToValue[currentType]}
+                    <BlockHeader
+                        title="getAboutMe"
+                        currentType={currentType}
+                        typesList={typesList}
+                        onChangeClick={handleClick}
+                    />
+                </Animation>
+                <div className={styles.aboutMe__text}>
+                    <Animation>
+                        {mapAboutMeTypesToValue[currentType]}
+                    </Animation>
                 </div>
             </div>
         </Wrapper>

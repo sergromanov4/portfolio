@@ -1,0 +1,31 @@
+.animation {
+    opacity: 0;
+    filter: blur(15px);
+
+    &__slideUp {
+        transform: translateY(100px);
+    }
+
+    &__fade {
+        opacity: 0;
+    }
+
+    &__slideRight {
+        transform: translateX(100%);
+    }
+
+    &__slideLeft {
+        transform: translateX(-100%);
+    }
+
+    &_smallOffset {
+        transform: translateY(50px);
+    }
+
+    &_startAnimate {
+        transform: translate(0, 0);
+        filter: blur(0);
+        opacity: 1;
+        transition: 0.7s ease all;
+    }
+}
