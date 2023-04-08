@@ -70,3 +70,48 @@
         }
     }
 }
+
+
+@include tablet-viewport {
+    .bannerImage {
+        height: 280px;
+        width: 280px;
+
+        &__avatar {
+            height: 200px;
+            width: 200px;
+        }
+
+        &__reactIcon {
+            height: 100px;
+            width: 100px;
+            bottom: 10px;
+            left: -20px;
+    
+            img {
+                height: 80px;
+                width: 80px;
+            }
+        }
+    
+        &__reduxIcon {
+            height: 80px;
+            width: 80px;
+    
+            img {
+                height: 50px;
+                width: 50px;
+            }
+        }
+    
+        &__tsIcon {
+            height: 60px;
+            width: 60px;
+    
+            img {
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+}

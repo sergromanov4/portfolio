@@ -7,3 +7,20 @@
     justify-content: space-between;
     height: calc(100vh - 70px - 120px);
 }
+
+@include tablet-viewport {
+    .banner {
+        margin-top: 80px;
+        height: fit-content;
+        padding-bottom: 50px;
+    }
+}
+
+@include mobile-viewport {
+    .banner {
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        row-gap: 40px;
+    }
+}

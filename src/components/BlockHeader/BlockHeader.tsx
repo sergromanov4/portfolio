@@ -19,13 +19,19 @@ const BlockHeader: React.FC<IBlockHeaderProps> = ({
     onChangeClick
 }) => {
     return (
-        <div className={styles.blockHeader}>
-            <span className={styles.blockHeader__title}>
-                {title}
-            </span>
-            <span className={styles.blockHeader__brackets}>
-                (
-            </span>
+        <div className={classNames(styles.blockHeader, {
+            [styles.blockHeader_noArg]: !typesList
+        })}
+        >
+            <div className={styles.blockHeader__wrapper}>
+                <span className={styles.blockHeader__title}>
+                    {title}
+                </span>
+                <span className={styles.blockHeader__brackets}>
+                    (
+                </span>
+            </div>
+
             {typesList && (
                 <div className={styles.blockHeader__menu}>
                     <span className={styles.blockHeader__menu__type}>
@@ -57,7 +63,7 @@ const BlockHeader: React.FC<IBlockHeaderProps> = ({
             )}
 
             <span className={styles.blockHeader__brackets}>
-                )
+                );
             </span>
         </div>
     );

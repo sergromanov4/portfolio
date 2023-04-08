@@ -23,3 +23,24 @@
         font-size: 2em;
     }
 }
+
+@include tablet-viewport {
+    .bannerText {
+        font-size: 1em;
+
+        &__name {
+            max-width: 400px;
+        }
+    }
+}
+
+@include mobile-viewport {
+    .bannerText {
+        justify-content: center;
+        align-self: center;
+        
+        span {
+            text-align: center;
+        }
+    }
+}

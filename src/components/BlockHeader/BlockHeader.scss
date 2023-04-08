@@ -7,6 +7,11 @@
     align-items: center;
     font-size: 3em;
 
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
     &__lines {
         margin-left: 15px;
         color: $grey1;
@@ -50,6 +55,32 @@
             align-items: center;
             color: $grey1;
             margin-bottom: -8px;
+        }
+    }
+}
+
+@include tablet-viewport {
+    .blockHeader {
+        font-size: 2.3em;
+    }
+}
+
+@include mobile-viewport {
+    .blockHeader {
+        font-size: 2em;
+
+        &:not(.blockHeader_noArg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__menu {
+            padding-right: 0;
+            padding-left: 30px;
+
+            &__type {
+                display: none;
+            }
         }
     }
 }

@@ -9,9 +9,11 @@ import Companies from 'components/Companies';
 import Projects from 'components/Projects';
 import Footer from 'components/Footer';
 
+import styles from './MainPage.scss';
+
 const App: React.FC = () => {
     return (
-        <div className="App">
+        <div className={styles.mainPage}>
             <Header />
             <Banner />
             <NumbersBanner />

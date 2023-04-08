@@ -11,13 +11,17 @@ interface IProjectCardProps {
     description: string;
     link: string;
     isEven: boolean;
+    customTrigger: boolean;
+    mapIndex: number
 }
 
 const ProjectCard: React.FC<IProjectCardProps> = ({
     isEven,
     name,
     description,
-    link
+    link,
+    customTrigger,
+    mapIndex
 }) => {
     const onLinkClick = useCallback(() => {
         window.open(link, '_blank', 'noreferrer');
@@ -48,7 +52,9 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
                 >
                     <Animation
                         type="fade"
+                        mapIndex={mapIndex}
                         delay={1}
+                        customTrigger={customTrigger}
                     >
                         <div className={styles.projectCard__wrapper__circle} />
                     </Animation>

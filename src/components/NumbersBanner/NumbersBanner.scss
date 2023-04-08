@@ -7,12 +7,17 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    row-gap: 20px;
 
     &__item {
         display: flex;
         flex-direction: row;
         align-items: center;
         column-gap: 10px;
+
+        &__wrapper {
+            display: flex;
+        }
 
         span:first-child {
             font-size: 3.6em;
@@ -24,5 +29,27 @@
             color: $grey2;
             white-space: pre-wrap;
         }
+    }
+}
+
+@include tablet-viewport {
+    .numbersBanner {
+        &__item {
+            display: flex;
+            width: 100%;
+
+            &__wrapper {
+                min-width: 274px;
+            }
+        }  
+    }
+}
+
+@include mobile-viewport {
+    .numbersBanner {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-self: center;
+        row-gap: 40px;
     }
 }

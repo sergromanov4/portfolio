@@ -1,4 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import Animation from 'components/ui/Animation';
 import Wrapper from 'components/Wrapper';
@@ -21,6 +22,11 @@ const Skills: React.FC = () => {
         Object.values(ESkillsTypes) || []
     ), []);
 
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true
+    });
+
     return (
         <div className={styles.skills}>
             <Wrapper>
@@ -36,11 +42,13 @@ const Skills: React.FC = () => {
 
                 <div
                     className={styles.skills__list}
+                    ref={ref}
                 >
                     {mapSkillsTypesToValue[currentType].map((item, index) => (
                         <Animation
                             key={item.name}
                             mapIndex={index}
+                            customTrigger={inView}
                         >
                             <div className={styles.skills__list__item}>
                                 <img

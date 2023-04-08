@@ -44,6 +44,8 @@ const Projects: React.FC = () => {
                                 name={item.name}
                                 description={item.description}
                                 link={item.link}
+                                customTrigger={inView}
+                                mapIndex={index}
                             />
                         </Animation>
                     ))}

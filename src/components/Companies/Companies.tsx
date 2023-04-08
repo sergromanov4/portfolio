@@ -1,4 +1,5 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import Animation from 'components/ui/Animation';
 import Wrapper from 'components/Wrapper';
@@ -11,6 +12,11 @@ import CompanyCard from './components/CompanyCard';
 import styles from './Companies.scss';
 
 const Companies: React.FC = () => {
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true
+    });
+
     return (
         <div className={styles.companies}>
             <Wrapper>
@@ -19,13 +25,17 @@ const Companies: React.FC = () => {
                         title="getCompanies"
                     />
                 </Animation>
-                <div className={styles.companies__list}>
+                <div
+                    className={styles.companies__list}
+                    ref={ref}
+                >
                     {COMPANIES.map((item, index) => (
                         <Animation
                             key={item.name}
                             mapIndex={index}
                             delay={0.5}
                             className={styles.companies__wrapper}
+                            customTrigger={inView}
                         >
                             <CompanyCard
                                 name={item.name}

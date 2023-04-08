@@ -8,3 +8,20 @@ $grey1: #4F4F4F;
 $grey2: #727171;
 $grey3: #2d2d2d;
 $green: #70FF00;
+
+// sizes
+
+$tablet-viewport-max-width: 992px;
+$mobile-viewport-max-width: 767px; 
+
+@mixin tablet-viewport {
+    @media (max-width: $tablet-viewport-max-width) {
+        @content;
+    }
+}
+
+@mixin mobile-viewport {
+    @media (max-width: $mobile-viewport-max-width) {
+        @content;
+    }
+}

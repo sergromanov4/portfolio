@@ -4,8 +4,8 @@ enum EAboutMeTypes {
 }
 
 enum ESkillsTypes {
-    main = 'mainStack',
-    exp = 'haveExperience'
+    main = 'main',
+    exp = 'secondary'
 }
 
 enum ECompany {

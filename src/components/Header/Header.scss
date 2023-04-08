@@ -10,3 +10,11 @@
     row-gap: 10px;
     height: 70px;
 }
+
+@include tablet-viewport {
+    .header {
+        flex-direction: column;
+        height: fit-content;
+        row-gap: 20px;
+    }
+}

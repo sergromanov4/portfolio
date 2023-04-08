@@ -9,7 +9,10 @@ import styles from './Footer.scss';
 const Footer: React.FC = () => {
     return (
         <Wrapper>
-            <Animation type="fade">
+            <Animation
+                type="fade"
+                className={styles.footer__wrapper}
+            >
                 <div className={styles.footer}>
                     <span className={styles.footer__title}>
                         Are you hiring?

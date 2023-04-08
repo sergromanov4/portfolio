@@ -11,7 +11,7 @@
         margin-top: 100px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         row-gap: 40px;
 
         &__item {
@@ -42,5 +42,11 @@
                 width: 100px;
             }
         }
+    }
+}
+
+@include mobile-viewport {
+    .skills {
+        padding: 80px 0;
     }
 }

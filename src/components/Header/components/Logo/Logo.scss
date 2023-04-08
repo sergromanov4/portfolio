@@ -6,6 +6,7 @@
     font-size: 2em;
     font-weight: 700;
     text-transform: uppercase;
+    order: 1;
 
     span:first-child {
         color: $greyMain;
@@ -13,5 +14,11 @@
 
     span:last-child {
         color: $white;
+    }
+}
+
+@include tablet-viewport {
+    .logo {
+        display: none;
     }
 }

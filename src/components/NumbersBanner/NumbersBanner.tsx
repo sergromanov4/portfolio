@@ -16,6 +16,7 @@ const BannerText: React.FC = () => {
                         mapIndex={index}
                         delay={1.6}
                         key={item.description}
+                        className={styles.numbersBanner__item__wrapper}
                     >
                         <div className={styles.numbersBanner__item}>
                             <span>
