@@ -8,7 +8,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = (_env, { mode }) => {
-    const isProd = mode === production;
+    const isProd = mode === 'production';
 
     return {
         entry: {
