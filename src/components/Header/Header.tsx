@@ -3,7 +3,7 @@ import React from 'react';
 import Wrapper from 'components/Wrapper';
 
 import Logo from './components/Logo';
-import Menu from './components/Menu';
+// import Menu from './components/Menu';
 
 import Contacts from '../Contacts';
 
@@ -14,7 +14,7 @@ const Header: React.FC = () => {
         <Wrapper>
             <div className={styles.header}>
                 <Logo />
-                <Menu />
+                {/* <Menu /> */}
                 <Contacts />
             </div>
         </Wrapper>

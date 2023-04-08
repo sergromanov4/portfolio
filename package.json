@@ -1,7 +1,7 @@
 {
-  "name": "partfolio",
+  "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://sergromanov4.github.io/partfolio",
+  "homepage": "https://sergromanov4.github.io/portfolio",
   "private": false,
   "dependencies": {
     "@types/node": "16.18.16",

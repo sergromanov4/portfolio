@@ -9,7 +9,7 @@ const BannerText: React.FC = () => {
                 Hello! I`m
             </span>
             <span className={styles.bannerText__name}>
-                {'< Sergei Romanov />'}
+                {'<Sergei Romanov />'}
             </span>
 
             <span className={styles.bannerText__post}>

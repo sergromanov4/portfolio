@@ -7,7 +7,9 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
-module.exports = () => {
+module.exports = (_env, { mode }) => {
+    const isProd = mode === production;
+
     return {
         entry: {
             index: './src/index.tsx'
@@ -16,7 +18,7 @@ module.exports = () => {
             path: path.resolve(__dirname, 'build'),
             filename: '[name].bundle.js',
             chunkFilename: '[id].js',
-            publicPath: '/'
+            publicPath: isProd ? './' : '/'
         },
 
         devtool: 'nosources-source-map',
