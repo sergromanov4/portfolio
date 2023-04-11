@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
                         I`m ready to join the team! Contact me!
                     </span>
 
-                    <Contacts isFooter={true} />
+                    <Contacts />
                 </div>
             </Animation>
         </Wrapper>

@@ -11,7 +11,7 @@ import Footer from 'components/Footer';
 
 import styles from './MainPage.scss';
 
-const App: React.FC = () => {
+const MainPage: React.FC = () => {
     return (
         <div className={styles.mainPage}>
             <Header />
@@ -26,4 +26,4 @@ const App: React.FC = () => {
     );
 };
 
-export default App;
+export default MainPage;

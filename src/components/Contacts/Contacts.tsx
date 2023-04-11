@@ -1,10 +1,8 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 
-import Button from 'components/ui/Button';
+import ExternalLink from 'components/ui/ExternalLink';
 
 import { CONTACTS } from 'constants/header';
-
-import emailIcon from 'icons/contacts/email.svg';
 
 import styles from './Contacts.scss';
 
@@ -12,44 +10,24 @@ interface IContactsProps {
     isFooter?: boolean;
 }
 
-const Contacts: React.FC<IContactsProps> = ({
-    isFooter = false
-}) => {
-    const list = useMemo(() => (
-        isFooter
-            ? [...CONTACTS, {
-                name: 'email',
-                icon: emailIcon,
-                link: ''
-            }]
-            : CONTACTS
-    ), [isFooter]);
-
+const Contacts: React.FC<IContactsProps> = () => {
     return (
         <ul className={styles.contacts}>
-            {list.map((item) => (
-                <li
+            {CONTACTS.map((item) => (
+                <ExternalLink
                     key={item.name}
-                    className={styles.contacts__item}
+                    link={item.link}
                 >
-                    <img
-                        className={styles.contacts__item__icon}
-                        src={item.icon}
-                        alt="icon"
-                    />
-                    {item.name}
-                </li>
+                    <li className={styles.contacts__item}>
+                        <img
+                            className={styles.contacts__item__icon}
+                            src={item.icon}
+                            alt="icon"
+                        />
+                        {item.name}
+                    </li>
+                </ExternalLink>
             ))}
-            {!isFooter && (
-                <Button>
-                    <img
-                        className={styles.contacts__item__icon}
-                        src={emailIcon}
-                        alt="icon"
-                    />
-                    Contacts
-                </Button>
-            )}
         </ul>
     );
 };

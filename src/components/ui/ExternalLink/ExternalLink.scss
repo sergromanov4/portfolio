@@ -1,0 +1,9 @@
+@import "src/styles/variables";
+
+.externalLink {
+   width: fit-content;
+   display: flex;
+   flex-direction: row;
+   text-decoration: none;
+   color: $white;
+}
