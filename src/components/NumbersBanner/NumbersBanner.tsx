@@ -6,6 +6,8 @@ import Wrapper from 'components/Wrapper';
 
 import NUMBERS_LIST from 'constants/numbersBanner';
 
+import useWindowSizeTypes from 'hooks/useWindowSizeTypes';
+
 import styles from './NumbersBanner.scss';
 
 const BannerText: React.FC = () => {
@@ -13,6 +15,8 @@ const BannerText: React.FC = () => {
         threshold: 0,
         triggerOnce: true
     });
+
+    const { isMobile } = useWindowSizeTypes();
 
     return (
         <Wrapper>
@@ -23,7 +27,7 @@ const BannerText: React.FC = () => {
                 {NUMBERS_LIST.map((item, index) => (
                     <Animation
                         mapIndex={index}
-                        delay={1.6}
+                        delay={isMobile ? 0 : 1.6}
                         key={item.description}
                         className={styles.numbersBanner__item__wrapper}
                         customTrigger={inView}
