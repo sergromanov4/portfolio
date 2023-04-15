@@ -12,7 +12,7 @@ $green: #70FF00;
 // sizes
 
 $tablet-viewport-max-width: 992px;
-$mobile-viewport-max-width: 767px; 
+$mobile-viewport-max-width: 768px; 
 
 @mixin tablet-viewport {
     @media (max-width: $tablet-viewport-max-width) {
