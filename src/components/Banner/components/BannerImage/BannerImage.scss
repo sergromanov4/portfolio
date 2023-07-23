@@ -113,5 +113,11 @@
                 width: 30px;
             }
         }
+
+        &__reactIcon,
+        &__reduxIcon,
+        &__tsIcon {
+            box-shadow: -2px 3px 15px 0px #000;
+        }
     }
 }
