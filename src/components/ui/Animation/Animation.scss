@@ -1,7 +1,6 @@
 .animation {
     display: flex;
     opacity: 0;
-    filter: blur(15px);
 
     &__slideUp {
         transform: translateY(100px);
@@ -25,7 +24,6 @@
 
     &_startAnimate {
         transform: translate(0, 0);
-        filter: blur(0);
         opacity: 1;
         transition: 0.7s ease all;
     }
